@@ -4,7 +4,10 @@ Blog micro service for the Hexonics site. The structure is a mono repo with an E
 
 _Structure_
 
-├── Blog Service
-│ └── API (Express)
-│ - └── Persistence (MongoDB)
-│ └── View (React)
+```
+Blog Service
+│
+└───API (Express)
+│   └─── Persistence (MongoDB)
+└───View (React)
+```
