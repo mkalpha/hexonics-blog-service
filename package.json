@@ -1,0 +1,15 @@
+{
+    "name" : "hexonics-blog-service",
+    "version" : "0.0.1",
+    "main" : "index.js",
+    "scripts" : {
+        "start" : "concurrently \"wsrun --parellel start\""
+    },
+    "workspaces" : [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "concurrently" : "^5.2.0",
+        "wsrun" : "^5.2.0"
+    }
+}
