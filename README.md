@@ -14,6 +14,8 @@ Blog Service
 
 ## TRPC
 
+https://trpc.io/docs/express
+
 GET http://localhost:4000/trpc/getUser?input=%221%22
 
 POST http://localhost:4000/trpc/createUser
