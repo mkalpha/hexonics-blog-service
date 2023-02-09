@@ -24,6 +24,7 @@ POST http://localhost:4000/trpc/createUser
 
 - Tidy file structure api
 - Setup trpc with react
+- write spec doc
 - setup prettier and eslint
 - create blog model + orm
 - setup mongoDB
