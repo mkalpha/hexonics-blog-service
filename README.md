@@ -11,3 +11,19 @@ Blog Service
 │   └─── Persistence (MongoDB)
 └───View (React)
 ```
+
+## TRPC
+
+GET http://localhost:4000/trpc/getUser?input=%221%22
+
+POST http://localhost:4000/trpc/createUser
+
+## Todo
+
+- Tidy file structure api
+- Setup trpc with react
+- setup prettier and eslint
+- create blog model + orm
+- setup mongoDB
+- backend testing
+- frontend testing
