@@ -28,13 +28,17 @@ tbc .. describe
 
 tbc ..... describe
 
-## Routes
+## Routes & Thunder Client
 
-https://trpc.io/docs/express
+A list of all available endpoints are store in the `/thunder-tests` directory. and are available as a collection using the `thunder client` vs code extension.
 
-GET http://localhost:4000/trpc/getUser?input=%221%22
+Install the [Thunder Client extenstion](https://github.com/rangav/thunder-client-support).
 
-POST http://localhost:4000/trpc/createUser
+In extension settings select `Save To Workspace`
+
+in `./packages/server` `npm run start` to start a local version of the server.
+
+You can make requests to the dev endpoints from the Thunder Client Extension
 
 ## Todo
 
