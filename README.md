@@ -7,9 +7,9 @@ _Structure_
 ```
 Blog Service
 │
-└───API (Express)
+└───Server (tRPC / Express)
 │   └─── Persistence (MongoDB)
-└───View (React)
+└───Client (React)
 ```
 
 ## Testing
