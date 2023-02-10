@@ -30,7 +30,7 @@ tbc ..... describe
 
 ## Routes & Thunder Client
 
-A list of all available endpoints are store in the `/thunder-tests` directory. and are available as a collection using the `thunder client` vs code extension.
+A list of all available endpoints are stored in the `/thunder-tests` directory. and are available as a collection using the `thunder client` vs code extension.
 
 Install the [Thunder Client extenstion](https://github.com/rangav/thunder-client-support).
 
