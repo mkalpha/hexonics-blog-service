@@ -1,10 +1,11 @@
 {
-  "name": "hexonics-blog-api",
+  "name": "server",
   "version": "1.0.0",
  
   "scripts": {
     "start": "ts-node index.ts"
   },
+  "main" : "index.ts",
   "dependencies": {
     "@trpc/server": "^10.9.1",
     "cors": "^2.8.5",
