@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {  httpBatchLink } from '@trpc/client';
 
 import "./index.css";
 
