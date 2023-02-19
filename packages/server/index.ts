@@ -2,15 +2,17 @@ import { inferAsyncReturnType } from "@trpc/server";
 import { appRouter } from "./routes";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import express from "express";
+import cors from "cors";
 
 const createContext = ({
   req,
   res,
 }: trpcExpress.CreateExpressContextOptions) => ({}); // no context
 
-const PORT = 4000;
+const PORT = 5000;
 
 const app = express();
+app.use(cors);
 app.use(
   "/trpc",
   trpcExpress.createExpressMiddleware({

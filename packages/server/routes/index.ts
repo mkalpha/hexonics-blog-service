@@ -6,6 +6,7 @@ export const trpc = initTRPC.context<Context>().create();
 
 const routes = {
   getUser: trpc.procedure.input(zod.string()).query((req) => {
+    console.log(`Received request ${req}`);
     req.input;
     return { id: req.input, name: "bilbo" };
   }),

@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import {  httpBatchLink } from '@trpc/client';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { trpc } from './trpc';
+import IndexPage from './components/IndexPage'
 
 import "./index.css";
 
-const App = () => (
-  <div className="container">
-    <div>Name: hexonics-blog-view</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
-  </div>
-);
+export function App() {
+  console.log('App')
+  const [queryClient] = useState(() => new QueryClient());
+  const [trpcClient] = useState(() =>
+    trpc.createClient({
+      links: [
+        httpBatchLink({
+          url: 'http://localhost:5000/trpc',
+        }),
+      ],
+    }),
+  );
+  return (
+    <trpc.Provider client={trpcClient} queryClient={queryClient}>
+      <QueryClientProvider client={queryClient}>
+        <IndexPage />
+      </QueryClientProvider>
+    </trpc.Provider>
+  );
+}
 ReactDOM.render(<App />, document.getElementById("app"));
