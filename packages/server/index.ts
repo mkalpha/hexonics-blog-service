@@ -7,12 +7,12 @@ import cors from "cors";
 const createContext = ({
   req,
   res,
-}: trpcExpress.CreateExpressContextOptions) => ({}); // no context
+}: trpcExpress.CreateExpressContextOptions) => ({ req, res }); // no context
 
 const PORT = 5000;
 
 const app = express();
-app.use(cors);
+app.use(cors());
 app.use(
   "/trpc",
   trpcExpress.createExpressMiddleware({
