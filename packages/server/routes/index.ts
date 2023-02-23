@@ -1,14 +1,11 @@
-import { initTRPC, inferAsyncReturnType } from "@trpc/server";
+import { initTRPC } from "@trpc/server";
 import { z as zod } from "zod";
 import { Context } from "../index";
 
 export const trpc = initTRPC.context<Context>().create();
 
 const routes = {
-  getUser: trpc.procedure.input(zod.string()).query((req) => {
-    console.log(`Received request ${req.ctx.req.originalUrl}`);
-    console.log(req.ctx.req.url);
-    console.log("req.input :", req.input);
+  getBlogs: trpc.procedure.input(zod.string()).query((req) => {
     return { id: req.input, name: "bilbo" };
   }),
   createUser: trpc.procedure

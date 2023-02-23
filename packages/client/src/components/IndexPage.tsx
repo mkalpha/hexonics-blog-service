@@ -1,7 +1,7 @@
 import { trpc } from '../trpc';
 export default function IndexPage() {
     console.log('IndexPage')
-  const user = trpc.getUser.useQuery('1234');
+  const user = trpc.getBlogs.useQuery('1234');
   console.log('user :', user);
   if (!user.data) return <div>Loading...</div>;
   return (

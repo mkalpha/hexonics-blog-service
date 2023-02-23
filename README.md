@@ -12,6 +12,12 @@ Blog Service
 └───Client (React)
 ```
 
+## MongoDB
+
+```bash
+sudo docker run -p 27017 --name mongo-db -d mongo:latest
+```
+
 ## Testing
 
 tbc ...
