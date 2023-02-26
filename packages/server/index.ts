@@ -3,6 +3,7 @@ import { appRouter } from "./routes";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import express from "express";
 import cors from "cors";
+import { connectDB } from "./config/db";
 
 const createContext = ({
   req,
@@ -10,6 +11,8 @@ const createContext = ({
 }: trpcExpress.CreateExpressContextOptions) => ({ req, res }); // no context
 
 const PORT = 5000;
+
+const db = connectDB();
 
 const app = express();
 app.use(cors());

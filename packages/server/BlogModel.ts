@@ -1,45 +1,37 @@
-export interface IBlog {
-  ID: string;
-  title: string;
-  description: string;
-  userID: string;
-  content: string;
-  created: string;
-  mainImageURL: string;
-  published: boolean;
-  tags: string[];
-}
+import mongoose from "mongoose";
 
-export class blog implements IBlog {
-  ID: string;
-  title: string;
-  description: string;
-  userID: string;
-  content: string;
-  created: string;
-  mainImageURL: string;
-  published: boolean;
-  tags: string[];
+const blogSchema = new mongoose.Schema(
+  {
+    ID: {
+      type: String,
+      required: [true, "ID field is required"],
+    },
+    title: {
+      type: String,
+      required: [true, "title field is required"],
+    },
+    description: {
+      type: String,
+      required: [true, "description field is required"],
+    },
+    userID: {
+      type: String,
+      required: [true, "userID field is required"],
+    },
+    content: {
+      type: String,
+      required: [true, "content field is required"],
+    },
+    mainImageURL: {
+      type: String,
+      required: false,
+    },
+    tags: {
+      type: Array<String>,
+      required: [true, "tags field is required"],
+    },
+  },
+  { timestamps: true }
+);
 
-  constructor(
-    ID: string,
-    title: string,
-    description: string,
-    userID: string,
-    content: string,
-    created: string,
-    mainImageURL: string,
-    published: boolean,
-    tags: string[]
-  ) {
-    (this.ID = ID),
-      (this.title = title),
-      (this.description = description),
-      (this.userID = userID),
-      (this.content = content),
-      (this.created = created),
-      (this.mainImageURL = mainImageURL),
-      (this.published = published),
-      (this.tags = tags);
-  }
-}
+export const BlogModel = mongoose.model("blog", blogSchema);

@@ -3,20 +3,14 @@
     "_id": "8ee50b7e-cd3f-4969-a3c7-6fc46cea3097",
     "colId": "50206ef0-dffb-4cc4-acb6-0008878b16a9",
     "containerId": "",
-    "name": "getUser",
-    "url": "http://localhost:5000/trpc/getUser?input=\"1234\"",
+    "name": "getBlogs",
+    "url": "http://localhost:5000/trpc/getBlogs",
     "method": "GET",
     "sortNum": 10000,
     "created": "2023-02-10T15:24:11.707Z",
-    "modified": "2023-02-19T09:37:06.819Z",
+    "modified": "2023-02-26T09:29:57.492Z",
     "headers": [],
-    "params": [
-      {
-        "name": "input",
-        "value": "\"1234\"",
-        "isPath": false
-      }
-    ],
+    "params": [],
     "tests": []
   },
   {
