@@ -17,17 +17,17 @@
     "_id": "43de566b-44c6-42a8-b3e1-a9b5ecd4593c",
     "colId": "50206ef0-dffb-4cc4-acb6-0008878b16a9",
     "containerId": "",
-    "name": "createUser",
-    "url": "http://localhost:5000/trpc/createUser",
+    "name": "createBlog",
+    "url": "http://localhost:5000/trpc/createBlog",
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-02-10T15:24:38.835Z",
-    "modified": "2023-02-19T09:37:14.329Z",
+    "modified": "2023-02-26T10:23:30.049Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n\t\"name\" : \"andrew\"\n}",
+      "raw": "{\n  \"title\": \"test Title\",\n  \"description\": \"Test Description\",\n  \"userID\": \"12345-6789\",\n  \"content\": \"Test Content\",\n  \"mainImageURL\": \"testimageURL\",\n  \"tags\": [\"test-tag-1\", \"test-tag-2\"]\n  }",
       "form": []
     },
     "tests": []

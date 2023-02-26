@@ -1,7 +1,7 @@
 import { initTRPC } from "@trpc/server";
-import { z as zod } from "zod";
 import { Context } from "../index";
 import { getAllBlogs } from "../BlogController";
+import { BlogSchema } from "../BlogModel";
 
 export const trpc = initTRPC.context<Context>().create();
 
@@ -10,12 +10,11 @@ const routes = {
     const blogs = getAllBlogs();
     return blogs;
   }),
-  createUser: trpc.procedure
-    .input(zod.object({ name: zod.string().min(5) }))
-    .mutation(async (req) => {
-      const user = { id: 1, name: "andrew" };
-      return user;
-    }),
+  createBlog: trpc.procedure.input(BlogSchema).mutation(async (req) => {
+    const newBlogcontent = req.input;
+    console.log("newBlogcontent :", newBlogcontent);
+    return "Testing";
+  }),
 };
 
 export const appRouter = trpc.router(routes);
