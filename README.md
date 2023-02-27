@@ -17,7 +17,7 @@ Blog Service
 docker pull mongo:latest
 
 ```bash
-sudo docker run -p 27017 --name mongo-db -d mongo:latest
+sudo docker run -p 27017 -d mongo:latest
 ```
 
 ## Testing

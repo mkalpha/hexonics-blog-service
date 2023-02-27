@@ -6,8 +6,8 @@ export default function IndexPage() {
   if (!user.data) return <div>Loading...</div>;
   return (
     <div>
-      {/* <p>{user.data.id}</p>
-      <p>{user.data.name}</p> */}
+      {/* <p>{user.data.ID}</p>
+      <p>{user.data.description}</p> */}
     </div>
   );
 }

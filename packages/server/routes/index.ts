@@ -1,6 +1,6 @@
 import { initTRPC } from "@trpc/server";
 import { Context } from "../index";
-import { getAllBlogs } from "../BlogController";
+import { getAllBlogs, createNewBlog } from "../BlogController";
 import { BlogSchema } from "../BlogModel";
 
 export const trpc = initTRPC.context<Context>().create();
@@ -13,6 +13,7 @@ const routes = {
   createBlog: trpc.procedure.input(BlogSchema).mutation(async (req) => {
     const newBlogcontent = req.input;
     console.log("newBlogcontent :", newBlogcontent);
+    const newBlog = createNewBlog(newBlogcontent);
     return "Testing";
   }),
 };
