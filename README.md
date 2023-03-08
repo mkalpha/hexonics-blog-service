@@ -51,11 +51,11 @@ You can make requests to the dev endpoints from the Thunder Client Extension
 ## Todo
 
 - ~~Tidy file structure api~~
-- Setup trpc with react
-- write spec doc
+- ~~Setup trpc with react~~
+- ~~write spec doc~~
 - setup prettier and eslint
-- create blog model + orm
-- setup mongoDB
+- ~~create blog model + orm~~
+- ~~setup mongoDB~~
 - backend testing
 - frontend testing
 - impliment logger
