@@ -57,5 +57,6 @@ You can make requests to the dev endpoints from the Thunder Client Extension
 - ~~create blog model + orm~~
 - ~~setup mongoDB~~
 - backend testing
+- backend error handling
 - frontend testing
 - impliment logger
