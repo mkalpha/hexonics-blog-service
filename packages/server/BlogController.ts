@@ -1,14 +1,13 @@
-import { BlogModel, Blog } from "./BlogModel";
-import { v4 as uuidv4 } from "uuid";
+import { BlogModel, IBlog } from "./BlogModel";
+import { Blog } from "./BlogSchema";
 
 export const getAllBlogs = async () => {
-  const blogs = await BlogModel.find();
+  const blogs: Array<IBlog> = await BlogModel.find();
   console.log("blogs :", blogs);
   return blogs;
 };
 
 export const createNewBlog = async (blog: Blog) => {
-  const ID = uuidv4();
-  const newBlog = await BlogModel.create({ ID, ...blog });
+  const newBlog: IBlog = await BlogModel.create(blog);
   console.log("newBlog :", newBlog);
 };
