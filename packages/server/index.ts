@@ -8,7 +8,7 @@ import { connectDB } from "./config/db";
 const createContext = ({
   req,
   res,
-}: trpcExpress.CreateExpressContextOptions) => ({ req, res }); // no context
+}: trpcExpress.CreateExpressContextOptions) => ({ req, res });
 
 const PORT = 5000;
 
@@ -23,7 +23,9 @@ app.use(
     createContext,
   })
 );
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+export const server = app.listen(PORT, () =>
+  console.log(`Listening on port ${PORT}`)
+);
 
 type Context = inferAsyncReturnType<typeof createContext>;
 type AppRouter = typeof appRouter;

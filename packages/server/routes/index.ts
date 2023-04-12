@@ -12,7 +12,6 @@ const routes = {
   }),
   createBlog: trpc.procedure.input(BlogSchema).mutation(async (req) => {
     const newBlogcontent = req.input;
-    console.log("newBlogcontent :", newBlogcontent);
     const newBlog = await createNewBlog(newBlogcontent);
     return newBlog;
   }),

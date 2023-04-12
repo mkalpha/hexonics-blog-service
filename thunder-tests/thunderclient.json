@@ -22,12 +22,12 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-02-10T15:24:38.835Z",
-    "modified": "2023-02-27T08:30:29.505Z",
+    "modified": "2023-03-25T08:46:29.051Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"title\": \"test Title3\",\n  \"description\": \"Test Description3\",\n  \"userID\": \"12345-6789\",\n  \"content\": \"Test Content\",\n  \"mainImageURL\": \"testimageURL\",\n  \"tags\": [\"test-tag-1\", \"test-tag-2\"]\n  }",
+      "raw": "{\n  \"title\": \"Cities\",\n  \"description\": \"A blog about cities\",\n  \"userID\": \"12345-6789\",\n  \"content\": \"Test Content\",\n  \"mainImageURL\": \"images/city.jpg\",\n  \"tags\": [\"test-tag-1\", \"test-tag-2\"]\n  }",
       "form": []
     },
     "tests": []

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import {  httpBatchLink } from '@trpc/client';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { trpc } from './trpc';
-import IndexPage from './components/IndexPage'
+import Blogs from './components/Blogs'
 
 import "./index.css";
 
@@ -22,7 +22,7 @@ export function App() {
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <IndexPage />
+        <Blogs />
       </QueryClientProvider>
     </trpc.Provider>
   );
