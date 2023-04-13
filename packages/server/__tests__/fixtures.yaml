@@ -1,0 +1,9 @@
+blogs:
+  - title: Cities
+    description: A blog about cities
+    userID: 12345-6789
+    content: Test Content
+    mainImageURL: images/city.jpg
+    tags:
+      - test-tag-1
+      - test-tag-2
